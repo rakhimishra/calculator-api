@@ -1,21 +1,21 @@
 const express = require("express");
-const userControlle = require("./controller");
+const userController = require("./controller");
 const userRouter = express.Router();
 //Handling base routes
 userRouter
   .route("/")
-  .get(userControlle.getfirstMessage);
+  .get(userController.getfirstMessage);
   
 //handling params routes
 userRouter
-  .route("/add").post(userControlle.addition);
+  .route("/add").post(userController.addition);
 
   userRouter
   .route("/sub").post(userControlle.sub);
   userRouter
-  .route("/multiply").post(userControlle.multiply);
+  .route("/multiply").post(userController.multiply);
   userRouter
-  .route("/division").post(userControlle.division);
+  .route("/division").post(userController.division);
   
   
 module.exports = userRouter;
